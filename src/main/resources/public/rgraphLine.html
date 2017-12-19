@@ -1,0 +1,150 @@
+<html>
+<script src="/RGraph.common.core.js"></script>
+<script src="/RGraph.line.js"></script>
+<script src="/RGraph.common.dynamic.js"></script>
+<script src="/RGraph.common.tooltips.js"></script>
+
+<body>
+<canvas id="cvs" width="600" height="250">
+
+</canvas>
+
+<script>
+    window.onload = function ()
+    {
+            var tooltips = [];
+            var data= [[5,4,7,6,8,5,9],[1,2,3,4,5,6,7]];
+
+        // Create the tooltips
+        for (var i=0; i<data[0].length; i+=1) {
+            tooltips[i] = 'Pageviews: ' + String(data[0][i])
+        }
+
+        var line = new RGraph.Line({
+            id: 'cvs',
+            data: data,
+
+            options: {
+                tooltips: tooltips,
+                tooltipsHighlight: false,
+                colors: ['#058DC7','red'],
+                filled: true,
+                fillstyle: 'rgba(229,243,249,0.5)',
+                tickmarks: 'filledcircle',
+                backgroundGridVlines: false,
+                backgroundGridBorder: false,
+                backgroundGridAutofitNumhlines: 2,
+                shadow: false,
+                linewidth: 4,
+                gutterLeft: 50,
+                gutterRight: 20,
+                numxticks: 3,
+                ylabelsCount: 2,
+                axisColor: '#aaa',
+                textColor: '#aaa',
+                labels: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+                textAccessible: true
+            }
+        }).trace2();
+    };
+</script>
+
+<table id="entityPayment" class="table table-striped entityTable dataTable no-footer" role="grid" aria-describedby="entityPayment_info"><thead>
+<tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="entityPayment" rowspan="1" colspan="1" style="width: 84px;" aria-sort="ascending" aria-label="Row: activate to sort column descending">Row</th><th class="sorting" tabindex="0" aria-controls="entityPayment" rowspan="1" colspan="1" style="width: 149px;" aria-label="Date: activate to sort column ascending">Date</th><th class="sorting" tabindex="0" aria-controls="entityPayment" rowspan="1" colspan="1" style="width: 219px;" aria-label="Amount: activate to sort column ascending">Amount</th><th class="sorting" tabindex="0" aria-controls="entityPayment" rowspan="1" colspan="1" style="width: 161px;" aria-label="Payment: activate to sort column ascending">Payment</th><th class="sorting" tabindex="0" aria-controls="entityPayment" rowspan="1" colspan="1" style="width: 219px;" aria-label="Balance: activate to sort column ascending">Balance</th><th class="sorting" tabindex="0" aria-controls="entityPayment" rowspan="1" colspan="1" style="width: 282px;" aria-label="BrokerageAmount: activate to sort column ascending">BrokerageAmount</th></tr>
+</thead>
+    <tbody>
+
+    <tr role="row" class="odd">
+        <td class="sorting_1">1</td>
+        <td>2016-09-17</td>
+
+
+        <td>462,916,365.595</td>
+        <td>251,842,694</td>
+        <td>211,073,671.595</td>
+        <td>7,079,230.155</td>
+    </tr><tr role="row" class="even">
+        <td class="sorting_1">2</td>
+        <td>2016-09-18</td>
+
+
+        <td>471,488,192.6</td>
+        <td>253,488,298</td>
+        <td>217,999,894.6</td>
+        <td>7,210,592.4</td>
+    </tr><tr role="row" class="odd">
+        <td class="sorting_1">3</td>
+        <td>2016-09-07</td>
+
+
+        <td>469,151,351.69</td>
+        <td>253,368,618</td>
+        <td>215,782,733.69</td>
+        <td>7,174,971.06</td>
+    </tr><tr role="row" class="even">
+        <td class="sorting_1">4</td>
+        <td>2016-09-08</td>
+
+
+        <td>479,835,124.51</td>
+        <td>253,902,283</td>
+        <td>225,932,841.51</td>
+        <td>7,337,966.49</td>
+    </tr><tr role="row" class="odd">
+        <td class="sorting_1">5</td>
+        <td>2016-09-19</td>
+
+
+        <td>470,163,096.395</td>
+        <td>253,344,276</td>
+        <td>216,818,820.395</td>
+        <td>7,190,504.355</td>
+    </tr><tr role="row" class="even">
+        <td class="sorting_1">6</td>
+        <td>2016-09-09</td>
+
+
+        <td>465,681,591.385</td>
+        <td>250,991,626</td>
+        <td>214,689,965.385</td>
+        <td>7,121,855.865</td>
+    </tr><tr role="row" class="odd">
+        <td class="sorting_1">7</td>
+        <td>2016-09-20</td>
+
+
+        <td>470,467,992.35</td>
+        <td>251,880,411</td>
+        <td>218,587,581.35</td>
+        <td>7,194,836.4</td>
+    </tr><tr role="row" class="even">
+        <td class="sorting_1">8</td>
+        <td>2016-09-21</td>
+
+
+        <td>471,719,796.18</td>
+        <td>250,913,974</td>
+        <td>220,805,822.18</td>
+        <td>7,214,029.32</td>
+    </tr><tr role="row" class="odd">
+        <td class="sorting_1">9</td>
+        <td>2016-09-10</td>
+
+
+        <td>472,523,010.32</td>
+        <td>254,980,806</td>
+        <td>217,542,204.32</td>
+        <td>7,226,570.43</td>
+    </tr><tr role="row" class="even">
+        <td class="sorting_1">10</td>
+        <td>2016-09-22</td>
+
+
+        <td>473,035,664.255</td>
+        <td>252,914,499</td>
+        <td>220,121,165.255</td>
+        <td>7,234,212.495</td>
+    </tr></tbody>
+</table>
+</body>
+</html>

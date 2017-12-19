@@ -1,0 +1,35 @@
+    <link rel="stylesheet" href="/jquery_1_11_4/jquery-ui.css">
+    <link rel="stylesheet" href="/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bootstrapValidator.min.css"/>
+    <link rel="stylesheet" href="/buttons.dataTables.min.css"/>
+    <link rel="stylesheet" href="/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="/fixedHeader.dataTables.min.css"/>
+    <link rel="stylesheet" href="/bootstrap-datepicker3.standalone.min.css"/>
+    <script src="/jquery_1_11_4/external/jquery/jquery.js"></script>
+    <script src="/jquery_1_11_4/jquery-ui.js"></script>
+
+    <link rel='stylesheet' href='/nprogress.css'/>
+    <style type="text/css">
+        <#include "/css/search_page.css">
+        <#include "/css/justifiednav.css">
+
+        .jainTravellerLogoSmall {
+            height: 55px;
+            width: 120px;
+        }
+
+        .hr_comments {
+           border-color: gray;
+           border-style: solid;
+           border-bottom: 1px;
+           margin:0px;
+           padding:0px;
+        }
+
+        .dropdown:hover .dropdown-menu {
+           display: block;
+        }
+
+    </style>

@@ -1,0 +1,150 @@
+--Release notes new2---
+—added brokerage Amount already
+-fix for save/restore
+-better items and hiding
+-move to lots of items based transactions
+-change in schema to not keep all info, just primary keys
+-eval in freemarker, OR clause
+-better indexing for search and in general
+-removal of added transaction
+-switching khareeedar invoice and kisaan invoice
+-change in invoices to supports the new schema
+-paymentType addition
+-ModelObj addition to improve on common Object
+-bugs
+-logging
+-transaction added with lots of UI
+-better management of HTML for adding multiple items
+-better use of dates, change creationDate to eventDate
+-implemented betweenDates functionality
+-implemented update
+-Seed Data will now put using randomization for each Kisaan
+-Commented the Trial Version logic in TemplateOverride.java
+--Need to fix the table issue in daily Summary
+
+
+--Release Notes new3---
+-Edit Profile added, updateOne had bug, instead used replaceOne
+-If kisaan/khareeddar has no transactions, there was error. fixed
+-add more links to do while editing/adding kisaan/khareeddar
+-monthly symmary fixed for all
+-code for range implementaion, added: we just need to provide UI and refer it
+-Use of better ICONS
+
+--Release Notes new3.1---
+--Added remove transaction, payments with ICONS
+--Fixed the remove API to show which one got deleted
+--Tested deleted transaction UI
+
+--Release new3.2--
+Incorporated Calendar with format and search inside entities
+
+--Release new3.3
+6] Searching for entities (inline vs out)
+
+--Release 4.0
+-Added Rgraphs on daily, summary and entity pages
+-handling if data does not exist
+-moved jQuery lib loading at top.
+
+--Release 5.0 (oct 23, 2016)
+13] formatting of graph values: comma separation and date
+14] Fixed sorting of tables in year/month/date
+15] added year based summaries
+16] added tips formatting based on availability of date arr
+17] Added hover on menus instead of clicking
+18] better home page when logged in
+Use of BigDecimal for results/amount
+fixed transactions breaking due to delta value less.
+fixed bug with khareeddar payment list
+added direct laoding of a search key
+
+--Release 5.1--
+19] DateRange Search for all with summaryType as a radio button
+-test all scenarios
+-load the page if search matches the result on search pages
+- Show frequent usages in top.
+14] yearly table in entity page
+7] Better range based search across entities
+10] Migrate date inputs to calendar for everything
+11] Fixed the eventDate for invoices
+5] Better UI for transaction
+-moved to bootstrap button info everywhere for all submissions
+
+--Release 5.2--
+19] command shortcuts for UI actions
+
+
+
+--Release 6--
+1] Added better landing page, with images carousel
+2] added more shortcuts, ctrl shows all shotcuts, shift moves to home, esc hides them
+3] added images for login/signup
+4] error messages for login/signup fixed
+5]commented Progress bars as its not providing value
+
+--Release 6.1--
+1]Tabbed on profile pages
+2] issue with graphs so only have 3 tabs for now
+3] made h4 strong for daily summaries
+4] added frequent operations everywhere, using shortcut 1 and hide 2
+5] footer was missing, added everywhere
+6] added tabbed for multi search too with better messaging
+
+--Release 6.2--
+1)cleanup
+2)reset fixed, with default password handling
+3)added daily/quarterly  and made shortcuts strong
+4)Added limt of 100 for multiSearch Results as well as normal Search
+5) added limit to header to save on adding limit for search
+6) added cookie specific to host, port
+
+--Next--
+--highPriority
+20] Safety net for deletes with better support.
+11] ReadOnly fields in transaction: cashAmount, brokerageAmount, mapariAmount
+4] cleanup code
+9] EDIT option for transaction,payment
+add limit for Search Results to 300
+show YES/NO while removing
+
+
+--Release 7:
+--added dates in the column for payments and transactions
+--remove disabled keys for addTransaction as we were not getting them while posting
+
+
+--mid
+
+11] Add better version of remove which asks for confirmation after showing the view.
+13] Addition of tabs in Entity page
+16] schedule a saving of DB
+17] add internationalization: hindi/marathi
+
+--lowPriority
+1] Customizing Graphs
+2] Issue in graphs when long list of dates. [Rgraph library issue]
+3]itemTransactions DAO
+8] Add remove/edit everywhere for ADMIN user [NO need]
+10] BackupSearches
+12] Internationalization
+Hindi/Marathi
+15] Better pages to show Progress
+18] control on no. of search results for search in entity
+19] hide graphs if they are empty
+
+--Internationalsation--
+
+
+--July 16--
+add image upload capability for entities
+fixed used of entityValue across programs
+added OS based support, creating backup and public dir
+fixed mongo properties and made it drive from one location
+tested the photo with new interface
+
+next:
+a)need to add image upload in add pages and view in invoice pages
+b)put entires for save and reload of db
+
+

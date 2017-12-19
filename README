@@ -1,0 +1,11 @@
+Things to configure
+1] MongoDB installation location, this will help with backup functionaliy
+-current defined in Constants file
+-public static final String MONGO_INSTALLATION = "/Users/chandanm/Downloads/mongodb-osx-x86_64-3.4.5";
+
+2] Public location for the project to pickup images
+-current defined in Constants file
+-need to change based on OS
+
+3] Need to run mongoDB first.
+4] Remove the dates for the program to be created.
