@@ -43,6 +43,13 @@ import static spark.Spark.staticFileLocation;
  */
 public class ControllerUtilities {
 
+    public static Set<String> IMAGE_FORMAT_SET = new HashSet<String>();
+    static {
+        IMAGE_FORMAT_SET.add("jpeg");
+        IMAGE_FORMAT_SET.add("jpg");
+        IMAGE_FORMAT_SET.add("png");
+        IMAGE_FORMAT_SET.add("gif");
+    }
     // helper function to get session cookie as string
     /*
     public static Configuration createFreemarkerConfiguration() {
@@ -663,6 +670,12 @@ public class ControllerUtilities {
         System.out.println(verifyDateInFormat(dateStr));
         System.out.println(getDateInFormat(dateStr));
         System.out.println(getNDaysDate(getDateInFormat(dateStr),-7));
+
+        System.out.println(getInputImageFormat("chandna.maloo"));
+        System.out.println(getInputImageFormat("chandna.maloo.JPG"));
+        System.out.println(getInputImageFormat("chandna.maloo.PNG"));
+        System.out.println(getInputImageFormat("chandna.maloo.jpeg"));
+        System.out.println(getInputImageFormat("chandna"));
     }
     /*
     final Part uploadedFile = request.raw().getPart("uploadedFile");
@@ -673,6 +686,16 @@ public class ControllerUtilities {
 
      */
 
+    /**
+     *
+     * @param fileContent
+     * @param fileName
+     * @param entity
+     * @return
+     * @throws ServletException
+     * @throws IOException
+     * TODO: detect photo format and write thumbnail in the same format
+     */
 
     public static String processPhotoUpload(InputStream fileContent, String fileName, String entity)
             throws ServletException, IOException {
@@ -703,9 +726,11 @@ public class ControllerUtilities {
             //Creating Thumbnail
             try {
                 logger.info("Creating Thumbnails for :{}",outputFileName);
+                String defaultFormat="jpg";
+                defaultFormat = getInputImageFormat(fileName);
                 Thumbnails.of(path+File.separator+outputFileName)
                         .size(Constants.THUMBNAIL_WIDTH, Constants.THUMBNAIL_HEIGHT)
-                        .outputFormat("jpg")
+                        .outputFormat(defaultFormat)
                         .toFiles(Rename.PREFIX_DOT_THUMBNAIL);
 
 
@@ -727,6 +752,23 @@ public class ControllerUtilities {
         return null;
     }
 
+    /**
+     * Gets the imageType format
+     * @param fileName
+     * @return
+     */
+    public static String getInputImageFormat(String fileName) {
+        String[] arr = fileName.split("\\.");
+        String format = arr[arr.length-1].toLowerCase();
+
+        if (IMAGE_FORMAT_SET.contains(format)) {
+            return format;
+        } else {
+            logger.warn("Found a new format for image:{}, we need to add it, returning jpg for now",format);
+            return "jpg";
+        }
+    }
+    
     public static String getFileName(final Part part) {
         final String partHeader = part.getHeader("content-disposition");
         logger.info("Part Header = {0}", partHeader);
@@ -738,4 +780,6 @@ public class ControllerUtilities {
         }
         return null;
     }
+
+
 }
