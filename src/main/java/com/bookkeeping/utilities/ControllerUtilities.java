@@ -670,12 +670,6 @@ public class ControllerUtilities {
         System.out.println(verifyDateInFormat(dateStr));
         System.out.println(getDateInFormat(dateStr));
         System.out.println(getNDaysDate(getDateInFormat(dateStr),-7));
-
-        System.out.println(getInputImageFormat("chandna.maloo"));
-        System.out.println(getInputImageFormat("chandna.maloo.JPG"));
-        System.out.println(getInputImageFormat("chandna.maloo.PNG"));
-        System.out.println(getInputImageFormat("chandna.maloo.jpeg"));
-        System.out.println(getInputImageFormat("chandna"));
     }
     /*
     final Part uploadedFile = request.raw().getPart("uploadedFile");
@@ -726,13 +720,10 @@ public class ControllerUtilities {
             //Creating Thumbnail
             try {
                 logger.info("Creating Thumbnails for :{}",outputFileName);
-                String defaultFormat="jpg";
-                defaultFormat = getInputImageFormat(fileName);
                 Thumbnails.of(path+File.separator+outputFileName)
                         .size(Constants.THUMBNAIL_WIDTH, Constants.THUMBNAIL_HEIGHT)
-                        .outputFormat(defaultFormat)
+                        .outputFormat(getInputImageFormat(fileName))
                         .toFiles(Rename.PREFIX_DOT_THUMBNAIL);
-
 
             } catch(Exception e) {
                 logger.error("Failed to create Thumbnail for:{}",outputFileName,e);
@@ -780,6 +771,4 @@ public class ControllerUtilities {
         }
         return null;
     }
-
-
 }
