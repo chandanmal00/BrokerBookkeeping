@@ -33,7 +33,7 @@
                           Want to add one more ${entityActual}: <a href="/addKhareeddarPayment">Click here <i class="fa fa-plus-square fa-lg" aria-hidden="true"></i></a>
                         </p>
                         <p>
-                           Created by mistake, want to remove ${entityActual}: ${entityObject.getUniqueKey()}
+                           Created by mistake, want to remove ${entityActual}: ${entityObject.getUniqueKey()}<br>
                            <#if admin??>
                            <a href="/remove/kisaanTransaction/${entityObject.getUniqueKey()}" target="_blank">Remove ${entityActual}<i class="fa fa fa-times fa-lg" aria-hidden="true"></i></a>(<font color="red">This will delete the entry be careful with this option</font>)
                            <#else>

@@ -66,14 +66,14 @@
                     <div class="grey" style="float:left;width:350px;">
                         <div id="photo" class="tileset">
                         <p style="text-align:center;"> update your latest avatar</p>
-                         <img src="/images/thumbnail_defaultPhoto.png" alt="defaultPhoto" class="builtBy">
+                         <img src="/images/thumbnail.defaultPhoto.png" alt="defaultPhoto" class="builtBy">
                          <#--
                             <#if nickName?? >
                                  <p style="text-align:center;">your latest pic</p>
                                  <img src="/thumbnail.${nickName}" alt="${nickName}" class="builtBy">
                             <#else>
                                  <p style="text-align:center;"> update your latest avatar</p>
-                                 <img src="/images/thumbnail_defaultPhoto.png" alt="defaultPhoto" class="builtBy">
+                                 <img src="/images/thumbnail.defaultPhoto.png" alt="defaultPhoto" class="builtBy">
                             </#if>
                           -->
                         </div>

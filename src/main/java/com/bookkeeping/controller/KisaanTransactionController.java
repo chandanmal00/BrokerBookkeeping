@@ -289,7 +289,9 @@ public class KisaanTransactionController {
                                     && Math.abs(itemSell.getAmount().doubleValue() - amount.doubleValue()) > deltaDouble )
                                     || bhartiFloat > 1 || bhartiFloat < 0) {
                                 errorMessages.add("Quantity/Price/Amount field cannot be NEGATIVE or ZERO and calcAmount has to be same as amount input, itemName:" + itemBarcode + ", quantity:" + quantityStr + ", price:" + priceStr + ", amount:" + amountStr + ", calcAmount:" + itemSell.getAmount());
+                                errorMessages.add("Bharti value cannot be >1 or <0, value input: "+bhartiFloat);
                                 logger.error("Negative or ZERO values as well amountTotal changes not allowed for quantity:{}, price:{}, amount:{}, amountCalc:{}, itemName:{}", quantity, priceStr, amountStr, itemSell.getAmount(), itemBarcode);
+                                logger.error("Bharti value cannot be >1 or <0, value input: {} ", bhartiFloat);
                                 errorCount++;
                             }
                             itemSell.setCreatedBy(sessionDAO.findUserNameBySessionId(ControllerUtilities.getSessionCookie(request)));

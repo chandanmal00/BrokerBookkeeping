@@ -3,7 +3,7 @@
         <#if entity.photo?? >
              <img src="/images/${entityValue}/thumbnail.${entity.getPhoto()}" alt="${entity.getUniqueKey()}" class="builtBy">
         <#else>
-             <img src="/images/thumbnail_defaultPhoto.png" alt="defaultPhoto" class="builtBy">
+             <img src="/images/thumbnail.defaultPhoto.png" alt="defaultPhoto" class="builtBy">
         </#if>
     </div>
 </div>
