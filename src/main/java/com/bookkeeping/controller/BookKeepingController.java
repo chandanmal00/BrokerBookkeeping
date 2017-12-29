@@ -1560,6 +1560,7 @@ public class BookKeepingController {
                 try {
                     if (StringUtils.isNotBlank(query)) {
                         root = ControllerUtilities.multiSearch(query,limit);
+                        root.put("query",query);
                         root.put("limit",limit);
                         templateOverride.process(root, writer);
                         return;
@@ -1575,6 +1576,7 @@ public class BookKeepingController {
                     }
                 } catch(Exception e) {
                     logger.error("Most likely an text index is missing for a collection",e);
+                    root.put("query",query);
                     root.put("entityList", new ArrayList());
                     root.put("kisaan", new ArrayList());
                     root.put("khareeddar", new ArrayList());

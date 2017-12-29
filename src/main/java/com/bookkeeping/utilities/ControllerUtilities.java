@@ -471,6 +471,13 @@ public class ControllerUtilities {
         root.put("kisaanTransaction",kisaanTransactionList);
         root.put("khareeddar",khareeddarList);
         root.put("khareeddarPayment",khareeddarPaymentList);
+        if ( kisaanList.size()>0 ||
+                kisaanPaymentList.size()>0 ||
+                khareeddarList.size()>0 ||
+                khareeddarPaymentList.size()>0 ||
+                kisaanTransactionList.size()>0 ) {
+            root.put("hasResults",1);
+        }
         return root;
 
     }
