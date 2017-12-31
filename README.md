@@ -1,11 +1,11 @@
-Provides bookkeeping for small businesses.
+Provides bookkeeping for Grain Brokers.
 
-build using mongodb, freemarker and spark java
-Prereq:
-a) MongoDatabase running
+* Technologies used: mongodb, freemarker and spark java
+* Prereq:
+  * MongoDatabase needs to be running
 
-To Run:
-a) Go to com.bookkeeping.controller.BookKeepingController and run it in your favorite IDE intellj
-b) Make sure you have mongod running
-c) http://localhost:8080/ [hit browser]
-# BrokerBookkeeping
+* To Run:
+  * Go to com.bookkeeping.controller.BookKeepingController and run it in your favorite IDE intellj
+  * Make sure you have mongod running
+  * http://localhost:8080/ [hit browser]
+
